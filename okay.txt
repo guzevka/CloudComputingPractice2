@@ -1,0 +1,5 @@
+docker build -t webserver . //  используется для создания Docker-образа с именем "webserver"
+docker run -it --rm -d -p 8080:80 --name web webserver // запускает контейнер из образа "webserver" 
+// с именем "web", привязывая порт 8080 хоста к порту 80 контейнера
+docker stop web // выключить сервер
+docker rm web // удалить контейнер
